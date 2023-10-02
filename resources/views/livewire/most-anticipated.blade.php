@@ -32,3 +32,4 @@
         </div>
 @endforelse
     </div>
+</div>

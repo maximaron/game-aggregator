@@ -30,11 +30,10 @@
                 <div class="relative">
                     <input type="text" class="bg-gray-800 text-sm rounded-full focus:outline-none focus:shadow-outline w-64 px-3 py-1" placeholder="Search...">
                     <div class="absolute top-0">
-                        a
                     </div>
                 </div>
                 <div class="ml-6">
-                     <a href="#"><img src="/avatar.jpg" alt="avatar" class="rounded-full w-8"></a>
+                     <a href="#"><img src="/ava.svg" alt="avatar" class="rounded-full w-8"></a>
                 </div>
             </div>
         </nav>
