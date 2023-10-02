@@ -7,9 +7,9 @@
             <div class="game-mt-8">
                 <div class="relative inline-block">
                     <a href="#">
-                        <img src="/f77.jpg" alt="game cover" class="hover:opacity-75 transition ease-in-out duration-150">
+                        <img src="/ff7.jpeg" alt="game cover" class="hover:opacity-75 transition ease-in-out duration-150">
                     </a>
-                    <div class="absolute bottom-0 right-0 w-17 bg-gray-800 rounded-full" style="right:-20px; bottom: -20px">
+                    <div class="absolute bottom-0 right-0 w-16 h-16 bg-gray-800 rounded-full" style="right:-20px; bottom: -20px">
                         <div class="font-semibold text-xs flex justify-center items-center h-full">
                             80%
                         </div>
@@ -25,9 +25,9 @@
             <div class="game-mt-8">
                 <div class="relative inline-block">
                     <a href="#">
-                        <img src="/f77.jpg" alt="game cover" class="hover:opacity-75 transition ease-in-out duration-150">
+                        <img src="/ff7.jpeg" alt="game cover" class="hover:opacity-75 transition ease-in-out duration-150">
                     </a>
-                    <div class="absolute bottom-0 right-0 w-17 bg-gray-800 rounded-full" style="right:-20px; bottom: -20px">
+                    <div class="absolute bottom-0 right-0 w-16 h-16 bg-gray-800 rounded-full" style="right:-20px; bottom: -20px">
                         <div class="font-semibold text-xs flex justify-center items-center h-full">
                             80%
                         </div>
@@ -43,9 +43,9 @@
             <div class="game-mt-8">
                 <div class="relative inline-block">
                     <a href="#">
-                        <img src="/f77.jpg" alt="game cover" class="hover:opacity-75 transition ease-in-out duration-150">
+                        <img src="/ff7.jpeg" alt="game cover" class="hover:opacity-75 transition ease-in-out duration-150">
                     </a>
-                    <div class="absolute bottom-0 right-0 w-17 bg-gray-800 rounded-full" style="right:-20px; bottom: -20px">
+                    <div class="absolute bottom-0 right-0 w-16 h-16 bg-gray-800 rounded-full" style="right:-20px; bottom: -20px">
                         <div class="font-semibold text-xs flex justify-center items-center h-full">
                             80%
                         </div>
@@ -61,9 +61,9 @@
             <div class="game-mt-8">
                 <div class="relative inline-block">
                     <a href="#">
-                        <img src="/f77.jpg" alt="game cover" class="hover:opacity-75 transition ease-in-out duration-150">
+                        <img src="/ff7.jpeg" alt="game cover" class="hover:opacity-75 transition ease-in-out duration-150">
                     </a>
-                    <div class="absolute bottom-0 right-0 w-17 bg-gray-800 rounded-full" style="right:-20px; bottom: -20px">
+                    <div class="absolute bottom-0 right-0 w-16 h-16 bg-gray-800 rounded-full" style="right:-20px; bottom: -20px">
                         <div class="font-semibold text-xs flex justify-center items-center h-full">
                             80%
                         </div>
@@ -79,9 +79,9 @@
             <div class="game-mt-8">
                 <div class="relative inline-block">
                     <a href="#">
-                        <img src="/f77.jpg" alt="game cover" class="hover:opacity-75 transition ease-in-out duration-150">
+                        <img src="/ff7.jpeg" alt="game cover" class="hover:opacity-75 transition ease-in-out duration-150">
                     </a>
-                    <div class="absolute bottom-0 right-0 w-17 bg-gray-800 rounded-full" style="right:-20px; bottom: -20px">
+                    <div class="absolute bottom-0 right-0 w-16 h-16 bg-gray-800 rounded-full" style="right:-20px; bottom: -20px">
                         <div class="font-semibold text-xs flex justify-center items-center h-full">
                             80%
                         </div>
@@ -97,9 +97,9 @@
             <div class="game-mt-8">
                 <div class="relative inline-block">
                     <a href="#">
-                        <img src="/f77.jpg" alt="game cover" class="hover:opacity-75 transition ease-in-out duration-150">
+                        <img src="/ff7.jpeg" alt="game cover" class="hover:opacity-75 transition ease-in-out duration-150">
                     </a>
-                    <div class="absolute bottom-0 right-0 w-17 bg-gray-800 rounded-full" style="right:-20px; bottom: -20px">
+                    <div class="absolute bottom-0 right-0 w-16 h-16 bg-gray-800 rounded-full" style="right:-20px; bottom: -20px">
                         <div class="font-semibold text-xs flex justify-center items-center h-full">
                             80%
                         </div>
@@ -115,9 +115,9 @@
             <div class="game-mt-8">
                 <div class="relative inline-block">
                     <a href="#">
-                        <img src="/f77.jpg" alt="game cover" class="hover:opacity-75 transition ease-in-out duration-150">
+                        <img src="/ff7.jpeg" alt="game cover" class="hover:opacity-75 transition ease-in-out duration-150">
                     </a>
-                    <div class="absolute bottom-0 right-0 w-17 bg-gray-800 rounded-full" style="right:-20px; bottom: -20px">
+                    <div class="absolute bottom-0 right-0 w-16 h-16 bg-gray-800 rounded-full" style="right:-20px; bottom: -20px">
                         <div class="font-semibold text-xs flex justify-center items-center h-full">
                             80%
                         </div>
@@ -133,9 +133,9 @@
             <div class="game-mt-8">
                 <div class="relative inline-block">
                     <a href="#">
-                        <img src="/f77.jpg" alt="game cover" class="hover:opacity-75 transition ease-in-out duration-150">
+                        <img src="/ff7.jpeg" alt="game cover" class="hover:opacity-75 transition ease-in-out duration-150">
                     </a>
-                    <div class="absolute bottom-0 right-0 w-17 bg-gray-800 rounded-full" style="right:-20px; bottom: -20px">
+                    <div class="absolute bottom-0 right-0 w-16 h-16 bg-gray-800 rounded-full" style="right:-20px; bottom: -20px">
                         <div class="font-semibold text-xs flex justify-center items-center h-full">
                             80%
                         </div>
@@ -151,14 +151,14 @@
         </div>
         <div class="flex flex-col lg:flex-row my-10">
             <div class="recently-reviewed w-full lg:w-3/4 mr-0 lg:mr-32">
-                <h2 class="text-blue-500 uppercahttps://github.com/maximaron/game-aggregatorse tracking-wide font-semibold">
+                <h2 class="text-blue-500 uppercase tracking-wide font-semibold">
                     Recently Reviewed
                 </h2>
                 <div class="recently-reviewed-container space-y-12 mt-8" >
                     <div class="game bg-gray-800 rounded-lg shadow-md flex px-6 py-6">
                         <div class="relative flex-none">
                             <a href="#">
-                                <img src="/f77.jpg" alt="game cover" class=" w-48 hover:opacity-75 transition ease-in-out duration-150">
+                                <img src="/ff7.jpeg" alt="game cover" class=" w-48 hover:opacity-75 transition ease-in-out duration-150">
                             </a>
                             <div class="absolute bottom-0 right-0 w-17 bg-gray-900 rounded-full" style="right:-20px; bottom: -20px">
                                 <div class="font-semibold text-xs flex justify-center items-center h-full">
@@ -180,7 +180,7 @@
                     <div class="game bg-gray-800 rounded-lg shadow-md flex px-6 py-6">
                         <div class="relative flex-none">
                             <a href="#">
-                                <img src="/f77.jpg" alt="game cover" class=" w-48 hover:opacity-75 transition ease-in-out duration-150">
+                                <img src="/ff7.jpeg" alt="game cover" class=" w-48 hover:opacity-75 transition ease-in-out duration-150">
                             </a>
                             <div class="absolute bottom-0 right-0 w-17 bg-gray-900 rounded-full" style="right:-20px; bottom: -20px">
                                 <div class="font-semibold text-xs flex justify-center items-center h-full">
@@ -202,7 +202,7 @@
                     <div class="game bg-gray-800 rounded-lg shadow-md flex px-6 py-6">
                         <div class="relative flex-none">
                             <a href="#">
-                                <img src="/f77.jpg" alt="game cover" class=" w-48 hover:opacity-75 transition ease-in-out duration-150">
+                                <img src="/ff7.jpeg" alt="game cover" class=" w-48 hover:opacity-75 transition ease-in-out duration-150">
                             </a>
                             <div class="absolute bottom-0 right-0 w-17 bg-gray-900 rounded-full" style="right:-20px; bottom: -20px">
                                 <div class="font-semibold text-xs flex justify-center items-center h-full">
@@ -228,7 +228,7 @@
                 <div class="most-antisipated-container space-y-10 mt-8">
                     <div class="game flex">
                         <a href="#">
-                            <img src="/f77.jpg" alt="game cover" class=" w-16 hover:opacity-75 transition ease-in-out duration-150">
+                            <img src="/ff7.jpeg" alt="game cover" class=" w-16 hover:opacity-75 transition ease-in-out duration-150">
                         </a>
                         <div class="ml-4">
                             <a href="#" class="hover:text-gray-300"> Cyberpunk 2077</a>
