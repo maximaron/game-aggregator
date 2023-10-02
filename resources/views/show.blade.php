@@ -2,12 +2,12 @@
 
 @section('content')
     <div class="container mx-auto px-4">
-        <div class="game-details border-b border-gray-800 pb-12 flex">
+        <div class="game-details border-b border-gray-800 pb-12 flex flex-col lg:flex-row">
             <div class="flex-none">
                 <img src="/ff7.jpeg" alt="cove">
             </div>
-            <div class="ml-12 mr-64">
-                <h2 class="font-semibold text=4xl"> Final Fantasy VII Remake</h2>
+            <div class=" lg:ml-12 lg:mr-64">
+                <h2 class="font-semibold text=4xl leading-tight mt-2"> Final Fantasy VII Remake</h2>
                   <div class="text-gray-400">
                         <span>Adventure, RPG</span>
                         &middot;
@@ -28,7 +28,7 @@
                         </div>
                         <div class="ml-4 text-xs">Critic <br> Score</div>
                     </div>
-                    <div class="flex items-center space-x-4 ml-12">
+                    <div class="flex items-center space-x-4 mt-4 lg:mt-0 lg:ml-12">
                        <div class="w-8 h-8 bg-gray-800 rounded-full flex justify-center items-center">
                            <a href="" class="hover:text-gray-400">
                                a
@@ -66,7 +66,7 @@
             <h2 class="text-blue-500 uppercase tracking-wide font-semibold">
                 images
             </h2>
-            <div class="grid grid-cols-3 gap-12 mt-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mt-8">
                 <div>
                     <a href="#">
                         <img src="/ff7.jpeg" alt="cover" class="hover:opacity-75 transition ease-in-out duration-150">
