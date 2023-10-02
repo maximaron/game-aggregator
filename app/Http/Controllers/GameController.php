@@ -13,49 +13,7 @@ class GameController extends Controller
      */
     public function index()
     {
-        $before = Carbon::now()->subMonths(2)->timestamp;
-        $after = Carbon::now()->addMonths(2)->timestamp;
-        $current = Carbon::now()->timestamp;
-        $afterFourMonths = Carbon::now()->addMonths(11)->timestamp;
-
-
-
-        $popularGames = HTTP::withHeaders(config('services.igdb'))
-            ->withBody(
-                "fields name, cover.url, first_release_date, platforms.abbreviation, rating;
-     sort rating desc;
-     where platforms = (48,49,130,6) & (first_release_date >= {$before} & first_release_date < {$after} & rating > 40);
-     limit 12;"
-            )
-            ->post('https://api.igdb.com/v4/games')
-            ->json();
-
-        //recently reviewed
-
-        $recentlyReviewed = HTTP::withHeaders(config('services.igdb'))
-            ->withBody(
-                "fields name, cover.url, first_release_date, platforms.abbreviation, rating,summary;
-     sort rating desc;
-     where platforms = (48,49,130,6) & (first_release_date >= {$before} & first_release_date < {$current} & rating > 75);
-     limit 12;"
-            )
-            ->post('https://api.igdb.com/v4/games')
-            ->json();
-
-        //most anticipated
-        $mostAnticipated = HTTP::withHeaders(config('services.igdb'))
-            ->withBody(
-                "fields name, cover.url, first_release_date, platforms.abbreviation, rating,summary;
-     sort rating desc;
-     where platforms = (48,49,130,6) & (first_release_date >= {$current} & first_release_date < {$afterFourMonths} & rating > 75);
-     limit 12;"
-            )
-            ->post('https://api.igdb.com/v4/games')
-            ->json();
         return view('index', [
-            'popularGames' => $popularGames,
-            'recentlyReviewed' => $recentlyReviewed,
-            'mostAnticipated' => $mostAnticipated
         ]);
 
     }

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Videogames</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <livewire:styles>
 </head>
 <body class="bg-gray-900 text-white">
     <header class="border-b border-gray-800">
@@ -48,5 +49,6 @@
             Powered by <a href="#" class="underline hover:text-gray-400">IGDB API</a>
         </div>
     </footer>
+<livewire:scripts>
 </body>
 </html>
