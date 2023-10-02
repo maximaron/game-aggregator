@@ -19,8 +19,16 @@
         </div>
     </div>
     @empty
-    <div>
-        Loading...
-    </div>
+        <div class="most-antisipated-container space-y-10 mt-8">
+            <div class="game flex">
+                <div>
+                    <div class="ml-4 w-16 bg-gray-700 h-20 ">
+                </div>
+                <div class="ml-4">
+                    <a href="#" class="bg-gray-700 text-transparent rounded">title goes here</a>
+                    <div class="text-transparent bg-gray-700 rounded text-sm mt-1">date</div>
+                </div>
+            </div>
+        </div>
 @endforelse
     </div>

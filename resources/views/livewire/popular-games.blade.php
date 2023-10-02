@@ -29,8 +29,16 @@
             </div>
         </div>
     @empty
-        <div>
-            Loading...
+        @foreach(range(1,12) as $game)
+        <div class="game-mt-8">
+            <div class="bg-gray-800 w-46 h-56"> </div>
+            <div class="block text-transparent text-lg bg-gray-700  leading-tight mt-1 rounded">
+                title goes here
+            </div>
+            <div class="text-transparent bg-gray-700 rounded mt-2 inline-block">
+                Platform goes here
+            </div>
         </div>
+        @endforeach
     @endforelse
 </div>

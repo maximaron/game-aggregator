@@ -34,8 +34,23 @@
             </div>
         </div>
     @empty
-    <div>
-        Loading...
-    </div>
+        @foreach(range(1,3) as $game)
+        <div class="game bg-gray-800 rounded-lg shadow-md flex px-6 py-6">
+            <div class="relative flex-none">
+              <div class="bg-gray-700 w-32 lg:w-48 h-40 lg:h-56"></div>
+            </div>
+            <div class="ml-12 lg-12">
+                <div class=" block text-lg font-semibold leading-tight text-transparent bg-gray-700 rounded  mt-4">
+                    title goes here
+                </div>
+                <div class="text-transparent bg-gray-700 inline-block mt-1 rounded">
+                    platform goes here
+                </div>
+                <p class="mt-6 text-transparent inline-block bg-gray-700 rounded hidden lg:block">
+                    pellentesque cetero maiestatis repudiare iusto habitant varius lacus civibus utroque brute definitionem tamquam legere euripidis adolescens nisl saperet nulla euripidis adversarium varius rhoncus velit solet doming elaboraret aliquam sea impetus atomorum praesent persecuti nominavi nibh alterum cu commune felis liber dolorum libris intellegebat movet oratio cum lacus nec vim purus
+                </p>
+            </div>
+        </div>
+        @endforeach
     @endforelse
 </div>
