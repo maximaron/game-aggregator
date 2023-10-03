@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/progressbar.js@1.1.0/dist/progressbar.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/progressbar.js@1.1.0/dist/progressbar.min.js"></script>
+
     @php
         if (isset($game['cover']['url'])) {
             $imagePath =($game['cover']['url']);
@@ -16,9 +19,11 @@
             <div class=" lg:ml-12 lg:mr-64">
                 <h2 class="font-semibold text=4xl leading-tight mt-2">{{$game['name']}}</h2>
                   <div class="text-gray-400">
+                      @if($game['genres'])
                         <span>
                                     {{$game['genres']}}
                         </span>
+                      @endif
                         &middot;
                         <span>{{$game['involvedCompanies']}}</span>
                         &middot;
@@ -28,13 +33,16 @@
                     </div>
                 <div class="flex flex-wrap items-center mt-8">
                     <div class="flex items-center">
-                        <div class="w-16 h-16 bg-gray-800 rounded-full">
-                            <div class="font-semibold text-xs flex justify-center items-center h-full">
-                                    {{round($game['rating']).'%' }}
-                            </div>
+                        <div class="w-16 h-16 bg-gray-800 rounded-full relative text-sm">
+                            <div id="progressBar" class="h-full"></div>
                         </div>
-                    <div class="ml-4 text-xs">Member <br> Score</div>
+                        <div class="ml-4 text-xs">Member <br> Score</div>
                     </div>
+                        @include('_rating',[
+                            'slug' => 'progressBar',
+                            'rating' => $game['rating'],
+                            'event' => null,
+                        ])
                     <div class="flex items-center space-x-4 mt-4 lg:mt-0 lg:ml-12">
                         @if($game['social']['website'])
                            <div class="w-8 h-8 bg-gray-800 rounded-full flex justify-center items-center">
@@ -109,10 +117,14 @@
                             </a>
                             @if(isset($game['rating']))
                                 <div class="absolute bottom-0 right-0 w-16 h-16 bg-gray-800 rounded-full" style="right:-20px; bottom: -20px">
-                                    <div class="font-semibold text-xs flex justify-center items-center h-full">
-                                        {{round($game['rating']).'%'}}
+                                    <div id="{{ $game['slug'] }}" class="font-semibold text-xs flex justify-center items-center h-full">
                                     </div>
                                 </div>
+                                @include('_rating',[
+                                    'slug' => $game['slug'],
+                                    'rating' => $game['rating'],
+                                    'event' => null,
+                                ])
                             @endif
                         </div>
                         <a href="#" class="block text-base font-semibold leading-tight hover:text-gray-400 mt-8">
