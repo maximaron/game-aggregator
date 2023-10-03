@@ -104,11 +104,10 @@
 
             <div class="popular-games text-sm grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 xl:grid-cols-6 gap-12">
                 @foreach($game['similar_games'] as $game)
-                    @dump($game)
                     <div class="game-mt-8">
                         <div class="relative inline-block">
                             <a href="#">
-{{--                                <img alt="cover"  src="{{Str::replaceFirst('thumb','cover_big',$game['cover']['url'])}}">--}}
+                                <img alt="cover"  src="/default.jpeg">
                             </a>
                             @if(isset($game['rating']))
                                 <div class="absolute bottom-0 right-0 w-16 h-16 bg-gray-800 rounded-full" style="right:-20px; bottom: -20px">
@@ -119,9 +118,13 @@
                             @endif
                         </div>
                         <a href="#" class="block text-base font-semibold leading-tight hover:text-gray-400 mt-8">
-                            Final Fantasy VII Remake
+                            {{$game['name']}}
                             <div class="text-gray-400 mt-1">
-                                Playstation 4
+                                @foreach($game['platforms'] as $platform)
+                                    @if(array_key_exists('abbreviation',$platform))
+                                        {{$platform['abbreviation']}},
+                                    @endif
+                                @endforeach
                             </div>
                         </a>
                     </div>
