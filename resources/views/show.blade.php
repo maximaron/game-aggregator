@@ -11,61 +11,59 @@
     <div class="container mx-auto px-4">
         <div class="game-details border-b border-gray-800 pb-12 flex flex-col lg:flex-row">
             <div class="flex-none">
-                <img src="{{Str::replaceFirst('thumb','cover_big',$imagePath)}}" alt="cove">
+                <img src="{{$game['coverImageUrl']}}" alt="cove">
             </div>
             <div class=" lg:ml-12 lg:mr-64">
                 <h2 class="font-semibold text=4xl leading-tight mt-2">{{$game['name']}}</h2>
                   <div class="text-gray-400">
                         <span>
-                            @foreach($game['genres'] as $genre)
-                                    {{$genre['name']}},
-                            @endforeach
+                                    {{$game['genres']}}
                         </span>
                         &middot;
-                        <span>{{$game['involved_companies'][0]['company']['name']}}</span>
+                        <span>{{$game['involvedCompanies']}}</span>
                         &middot;
                         <span>
-                            @foreach($game['platforms'] as $platform)
-                                @if(array_key_exists('abbreviation',$platform))
-                                    {{$platform['abbreviation']}},
-                                @endif
-                            @endforeach
+                            {{$game['platforms']}}
                         </span>
                     </div>
                 <div class="flex flex-wrap items-center mt-8">
                     <div class="flex items-center">
                         <div class="w-16 h-16 bg-gray-800 rounded-full">
                             <div class="font-semibold text-xs flex justify-center items-center h-full">
-                                @if(array_key_exists('rating',$game))
                                     {{round($game['rating']).'%' }}
-                                @else
-                                    0%
-                                @endif
                             </div>
                         </div>
                     <div class="ml-4 text-xs">Member <br> Score</div>
                     </div>
                     <div class="flex items-center space-x-4 mt-4 lg:mt-0 lg:ml-12">
-                       <div class="w-8 h-8 bg-gray-800 rounded-full flex justify-center items-center">
-                           <a href="" class="hover:text-gray-400">
-                               <img src="/planet.svg" alt="planet" class="w-8 h-5 fill-current">
-                           </a>
-                       </div>
-                        <div class="w-8 h-8 bg-gray-800 rounded-full flex justify-center items-center">
-                            <a href="" class="hover:text-gray-400">
-                                <img src="/insta.svg" alt="planet" class="w-8 h-5 fill-current">
-                            </a>
-                        </div>
-                        <div class="w-8 h-8 bg-gray-800 rounded-full flex justify-center items-center">
-                            <a href="" class="hover:text-gray-400">
-                                <img src="/twit.svg" alt="planet" class="w-8 h-5 fill-current">
-                            </a>
-                        </div>
-                        <div class="w-8 h-8 bg-gray-800 rounded-full flex justify-center items-center">
-                            <a href="" class="hover:text-gray-400">
-                                <img src="/fb.svg" alt="planet" class="w-8 h-5 fill-current">
-                            </a>
-                        </div>
+                        @if($game['social']['website'])
+                           <div class="w-8 h-8 bg-gray-800 rounded-full flex justify-center items-center">
+                               <a href="{{$game['social']['website']['url']}}" class="hover:text-gray-400">
+                                   <img src="/planet.svg" alt="planet" class="w-8 h-5 fill-current">
+                               </a>
+                           </div>
+                        @endif
+                        @if($game['social']['instagram'])
+                            <div class="w-8 h-8 bg-gray-800 rounded-full flex justify-center items-center">
+                                <a href="{{$game['social']['instagram']['url']}}" class="hover:text-gray-400">
+                                    <img src="/insta.svg" alt="insta" class="w-8 h-5 fill-current">
+                                </a>
+                            </div>
+                            @endif
+                            @if($game['social']['twitter'])
+                                <div class="w-8 h-8 bg-gray-800 rounded-full flex justify-center items-center">
+                                    <a href="{{$game['social']['twitter']['url']}}" class="hover:text-gray-400">
+                                        <img src="/twit.svg" alt="twit" class="w-8 h-5 fill-current">
+                                    </a>
+                                </div>
+                            @endif
+                            @if($game['social']['facebook'])
+                                <div class="w-8 h-8 bg-gray-800 rounded-full flex justify-center items-center">
+                                    <a href="" class="hover:text-gray-400">
+                                        <img src="/fb.svg" alt="planet" class="w-8 h-5 fill-current">
+                                    </a>
+                                </div>
+                            @endif
                     </div>
                 </div>
                 <p class="mt-12">
@@ -75,7 +73,7 @@
 {{--                    <button class="flex bg-blue-500 text-white font-semibold px-4 py-4 hover:bg-blue-600 rounded transition ease-in-out duration-150">--}}
 {{--                        <span class="ml-2"> Play Trailer</span>--}}
 {{--                    </button> --}}
-                    <a href="https://youtube.com/watch/{{$game['videos'][0]['video_id']}}" class="inline-flex flex bg-blue-500 text-white font-semibold px-4 py-4 hover:bg-blue-600 rounded transition ease-in-out duration-150">
+                    <a href="{{$game['trailer']}}" class="inline-flex flex bg-blue-500 text-white font-semibold px-4 py-4 hover:bg-blue-600 rounded transition ease-in-out duration-150">
                         <span class="ml-2"> Play Trailer</span>
                     </a>
                 </div>

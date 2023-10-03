@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Str;
 
 class GameController extends Controller
 {
@@ -47,7 +48,29 @@ class GameController extends Controller
             )->post('https://api.igdb.com/v4/games')->json();
         abort_if(!$game, 404);
         return view('show', [
-            'game' => $game[0]
+            'game' => $this->formatGameForView($game[0]),
+        ]);
+    }
+    private function formatGameForView($game)
+    {
+        return collect($game)->merge([
+            'coverImageUrl'=> Str::replaceFirst('thumb','cover_big',$game['cover']['url']),
+            'genres' => collect($game['genres'])->pluck('name')->implode(', '),
+            'involvedCompanies' => $game['involved_companies'][0]['company']['name'],
+            'platforms' => collect($game['platforms'])->pluck('abbreviation')->implode(', '),
+            'trailer' => 'https://youtube.com/watch/'.$game['videos'][0]['video_id'],
+            'social' => [
+                'website' => collect($game['websites'])->first(),
+                'facebook' => collect($game['websites'])->filter(function($website){
+                return Str::contains($website['url'],'facebook');
+                })->first(),
+                'twitter' => collect($game['websites'])->filter(function($website){
+                    return Str::contains($website['url'],'twitter');
+                })->first(),
+                'instagram' => collect($game['websites'])->filter(function($website){
+                    return Str::contains($website['url'],'instagram');
+                })->first(),
+            ]
         ]);
     }
 
