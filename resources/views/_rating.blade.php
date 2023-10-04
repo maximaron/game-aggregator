@@ -1,12 +1,21 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/progressbar.js@1.1.0/dist/progressbar.min.css">
+<script src="https://cdn.jsdelivr.net/npm/progressbar.js@1.1.0/dist/progressbar.min.js"></script>
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var container = document.getElementById('{{$slug }}');
+    @if ($event) window.livewire.on('{{ $event }}', params => { @endif
 
-        var bar = new ProgressBar.Circle(container, {
+        @if ($event)
+        var progressBarContainer = document.getElementById(params.slug)
+        @else
+        var progressBarContainer = document.getElementById('{{ $slug }}')
+        @endif
+
+        var bar = new ProgressBar.Circle(progressBarContainer, {
             color: 'white',
+            // This has to be the same size as the maximum width to
+            // prevent clipping
             strokeWidth: 6,
-            trailWidth: 4,
-            trailColor: '#4B5563',
+            trailWidth: 3,
+            trailColor: '#4A5568',
             easing: 'easeInOut',
             duration: 2500,
             text: {
@@ -14,7 +23,8 @@
             },
             from: { color: '#48BB78', width: 6 },
             to: { color: '#48BB78', width: 6 },
-            step: function (state, circle) {
+            // Set default step function for all animate calls
+            step: function(state, circle) {
                 circle.path.setAttribute('stroke', state.color);
                 circle.path.setAttribute('stroke-width', state.width);
 
@@ -22,12 +32,17 @@
                 if (value === 0) {
                     circle.setText('0%');
                 } else {
-                    circle.setText(value + '%');
+                    circle.setText(value+'%');
                 }
+
             }
         });
 
-        var rating = parseFloat({{ $rating }}) / 100;
-        bar.animate(rating);
-    });
+        @if ($event)
+        bar.animate(params.rating);
+        @else
+        bar.animate({{ $rating }} / 100);
+        @endif
+
+        @if ($event) }) @endif
 </script>

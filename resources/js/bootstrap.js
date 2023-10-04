@@ -11,8 +11,6 @@ window.axios = axios;
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
-import ProgressBar from 'progressbar.js';
-window.ProgressBar = ProgressBar;
 
 
 /**
