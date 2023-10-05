@@ -58,7 +58,7 @@ class GameController extends Controller
             'genres' => collect($game['genres'])->pluck('name')->implode(', '),
             'involvedCompanies' => $game['involved_companies'][0]['company']['name'],
             'platforms' => collect($game['platforms'])->pluck('abbreviation')->implode(', '),
-            'trailer' => 'https://youtube.com/watch/'.$game['videos'][0]['video_id'],
+            'trailer' => 'https://youtube.com/embed/'.$game['videos'][0]['video_id'],
             'social' => [
                 'website' => collect($game['websites'])->first(),
                 'facebook' => collect($game['websites'])->filter(function($website){

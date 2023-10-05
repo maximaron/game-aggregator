@@ -6,13 +6,15 @@
     <title>Videogames</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <livewire:styles>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
 </head>
 <body class="bg-gray-900 text-white">
     <header class="border-b border-gray-800">
         <nav class="container mx-auto flex flex-col lg:flex-row item-center justify-between px-4 py-6">
             <div class="flex flex-col lg:flex-row item-center">
                 <a href="/">
-                    <img src="/laracasts-logo.svg" alt="laracasts" class="w-32 flex-none">
+                    <img src="/download.png" alt="laracasts" class="w-20 flex-none">
                 </a>
                 <ul class="flex ml-0 lg:ml-16 space-x-8 mt-6 lg:mt-0">
                     <li>

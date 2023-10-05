@@ -15,11 +15,7 @@
                     </a>
                     <div class="absolute bottom-0 right-0 w-16 h-16 bg-gray-800 rounded-full" style="right:-20px; bottom: -20px">
                         <div id="progress-container" class="font-semibold text-xs flex justify-center items-center h-full">
-                                @include('_rating', [
-                                    'slug' => $game['slug'],
-                                    'rating' => $game['rating'],
-                                    'event' => null,
-                                ])
+                               {{ $game['rating'] }}
                         </div>
                     </div>
                 </div>
@@ -29,7 +25,6 @@
                 <div class="text-gray-400 mt-1">
                     {{$game['platforms']}}
                 </div>
-                <!-- Добавление анимированного круга ProgressBar.js -->
                 <div id="progressBar{{$loop->index}}" class="progress-bar"></div>
             </div>
         @empty
@@ -42,7 +37,7 @@
                     <div class="text-transparent bg-gray-700 rounded mt-2 inline-block">
                         Platform goes here
                     </div>
-                    <!-- Добавление анимированного круга ProgressBar.js для пустых элементов -->
+
                     <div id="progressBar{{$loop->index}}" class="progress-bar"></div>
                 </div>
             @endforeach
@@ -53,36 +48,3 @@
     ])
 </div>
 
-{{--// document.addEventListener('livewire:initialized', () => {--}}
-{{--// @this.on('gameWithRatingAdded', params => {--}}
-{{--//     console.log(params['0']['rating'])--}}
-{{--//     const rating = params['0']['rating'];--}}
-{{--//--}}
-{{--//     const progressBarId = `progressBar${params['0']['index']}`;--}}
-{{--//     const bar = new ProgressBar.Circle(document.getElementById(progressBarId), {--}}
-{{--//         color: 'white',--}}
-{{--//         strokeWidth: 6,--}}
-{{--//         trailWidth: 4,--}}
-{{--//         trailColor: '#4B5563',--}}
-{{--//         easing: 'easeInOut',--}}
-{{--//         duration: 2500,--}}
-{{--//         text: {--}}
-{{--//             autoStyleContainer: false--}}
-{{--//         },--}}
-{{--//         from: {color: '#48BB78', width: 6},--}}
-{{--//         to: {color: '#48BB78', width: 6},--}}
-{{--//         step: function (state, circle) {--}}
-{{--//             circle.path.setAttribute('stroke', state.color);--}}
-{{--//             circle.path.setAttribute('stroke-width', state.width);--}}
-{{--//--}}
-{{--//             var value = Math.round(circle.value() * 100);--}}
-{{--//             if (value === 0) {--}}
-{{--//                 circle.setText('0%');--}}
-{{--//             } else {--}}
-{{--//                 circle.setText(value + '%');--}}
-{{--//             }--}}
-{{--//         }--}}
-{{--//     });--}}
-{{--//     bar.animate(rating / 100);--}}
-{{--// });--}}
-{{--// });--}}
